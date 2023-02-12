@@ -1,0 +1,18 @@
+.bannerWrapper {
+    padding: 5rem;
+    background-image: url("../../imgs/bg-intro-dott.png");
+    background-color: #315EFB;
+    background-position: center center;
+}
+
+.bannerText {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.wrapperSelect {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 10px;
+}

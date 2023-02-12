@@ -4,9 +4,9 @@ import Banner from '../../components/Banner'
 
 function Home () {
     return (
-        <Container>
+        <div>
             <Banner/>
-        </Container>
+        </div>
     )
 }
 

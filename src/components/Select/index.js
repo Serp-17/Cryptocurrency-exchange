@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Select from 'react-select';
 
-function CustomSelect ({ options }) {
+function CustomSelect ({ options, handleChange, name }) {
     return (
         <Select
             options={options}
-            defaultValue={options[0]}
+            name={name}
+            onChange={e => handleChange(e.name, name)}
             components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
         />
     )
 }
 
-export default CustomSelect;
+export default memo(CustomSelect);

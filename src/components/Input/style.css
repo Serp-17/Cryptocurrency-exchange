@@ -1,0 +1,4 @@
+.form-control-input {
+    display: flex;
+    flex-direction: column;
+}

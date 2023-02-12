@@ -3,13 +3,15 @@ import Help from './pages/Help';
 import Check from './pages/Check';
 import Rules from './pages/Rules';
 import Contact from './pages/Contact';
+import ChangePage from './pages/Change';
 
 import {
     HELP_ROUTE,
     HOME_ROUTE,
     CHECK_ROUTE,
     RULES_ROUTE,
-    CONTACT_ROUTE
+    CONTACT_ROUTE,
+    CHANGE_ROUTE,
 } from './utils/consts';
 
 export const authRouter = [
@@ -23,4 +25,5 @@ export const publicRouter = [
     { path: CHECK_ROUTE, Component: <Check/> },
     { path: RULES_ROUTE, Component: <Rules/> },
     { path: CONTACT_ROUTE, Component: <Contact/> },
+    { path: CHANGE_ROUTE, Component: <ChangePage/> },
 ];
