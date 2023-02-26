@@ -45,7 +45,7 @@ const routes = [
     },
 ]
 
-function NavBar() {
+function NavBar({ handleLanguageChange, language }) {
     const Links = routes.map((item, index) => {
         return (
             <NavLink
@@ -56,7 +56,9 @@ function NavBar() {
                 { item.name }
             </NavLink>
         )
-    })
+    });
+
+    const handleChange = (e) => handleLanguageChange(e.value);
 
     return (
         <Navbar bg="light" expand="lg">
@@ -75,7 +77,7 @@ function NavBar() {
                     </Nav>
                 </Navbar.Collapse>
                 <div className="d-flex align-items-center">
-                    <CustomSelect options={ options } />
+                    <CustomSelect options={options} handleChange={handleChange} defaultVal={language}/>
                     <Button className="ms-2">
                         Sign in
                     </Button>
