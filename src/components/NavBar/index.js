@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './index.css';
 import {
     Container,
@@ -46,6 +47,8 @@ const routes = [
 ]
 
 function NavBar({ handleLanguageChange, language }) {
+    const { t } = useTranslation();
+
     const Links = routes.map((item, index) => {
         return (
             <NavLink
@@ -53,7 +56,7 @@ function NavBar({ handleLanguageChange, language }) {
                 to={item.path}
                 className="ms-2 me-2 text-decoration-none text-reset"
             >
-                { item.name }
+                { t(item.name) }
             </NavLink>
         )
     });
@@ -77,7 +80,11 @@ function NavBar({ handleLanguageChange, language }) {
                     </Nav>
                 </Navbar.Collapse>
                 <div className="d-flex align-items-center">
-                    <CustomSelect options={options} handleChange={handleChange} defaultVal={language}/>
+                    <CustomSelect
+                        options={options}
+                        handleChange={handleChange}
+                        defaultVal={language}
+                    />
                     <Button className="ms-2">
                         Sign in
                     </Button>

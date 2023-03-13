@@ -1,5 +1,8 @@
 .bannerWrapper {
-    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-image: url("../../imgs/bg-intro-dott.png");
     background-color: #315EFB;
     background-position: center center;

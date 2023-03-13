@@ -4,7 +4,6 @@ import React, {
     useState
 } from 'react';
 import { useLocation } from 'react-router-dom';
-import { getCoinOHLCY } from '../../api/coins';
 import { Container } from 'react-bootstrap';
 import FormContact from '../../components/ContactForm';
 
@@ -16,12 +15,12 @@ const ChangePage = () => {
     const [sendCoin, setSendCoin] = useState(0);
 
     useEffect(() => {
-        getCoinOHLCY(params.get('getCoin')).then(res => {
-            setGetCoin(res[0].high);
-        });
-        getCoinOHLCY(params.get('sendCoin')).then(res => {
-            setSendCoin(res[0].high);
-        });
+        // getCoinOHLCY(params.get('getCoin')).then(res => {
+        //     setGetCoin(res[0].high);
+        // });
+        // getCoinOHLCY(params.get('sendCoin')).then(res => {
+        //     setSendCoin(res[0].high);
+        // });
     }, [])
 
     return (
